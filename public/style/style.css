@@ -1,0 +1,263 @@
+:root {
+    --white: #efdfbb; /* Mengganti warna putih dengan #efdfbb */
+    --black: #110e21; /* Mengganti warna hitam dengan #ab274f */
+    --dark-blue: #110e21; /* Mengganti warna dark-blue dengan #ab274f */
+    --pink: #110e21; /* Mengganti warna pink dengan #ab274f */
+    --grape: #110e21; /* Mengganti warna grape dengan #ab274f */
+    --slate: #efdfbb; /* Mengganti warna slate dengan #efdfbb */
+    --slate-500: #110e21; /* Mengganti warna slate-500 dengan #ab274f */
+    --blue: #110e21; /* Mengganti warna blue dengan #ab274f */
+}
+
+*,
+*::before,
+*::after {
+    list-style-type: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Tahoma";
+}
+body {
+    background-color: var(--black);
+    color: var(--white);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: var(--blue);
+    padding-bottom: 2%;
+}
+.wrap {
+    max-width: 1100px;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.left-header {
+    display: flex;
+}
+
+.navbar {
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around; /* Rata tengah dan beri ruang antara item */
+    list-style: none; /* Menghilangkan bullet point */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    position: relative; /* Untuk posisi elemen dropdown jika diperlukan */
+}
+
+.navbar ul li a {
+    display: flex; /* Menggunakan flex untuk penataan yang lebih baik */
+    flex-direction: column; /* Menyusun ikon dan teks secara vertikal */
+    align-items: center; /* Menyelaraskan konten di tengah */
+    padding: 10px; /* Mengatur padding untuk lebih banyak ruang */
+    min-width: 85px;
+    color: var(--white);
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    transition: background-color 0.3s ease; /* Transisi halus saat hover */
+}
+
+.navbar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efek hover */
+    border-radius: 5px; /* Menambahkan sudut melingkar */
+}
+
+.navbar ul li svg {
+    margin-bottom: 5px; /* Menambahkan jarak antara ikon dan teks */
+}
+
+.content {
+    margin-top: -15%;
+    margin-bottom: 5%;
+}
+
+.content ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.content ul li {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px; /* Menambahkan rounded corners */
+    border: 1px solid var(--white);
+    padding: 10px; /* Padding untuk menjaga ruang dalam item */
+    margin: 8px; /* Menambahkan jarak antar item */
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.1
+    ); /* Latar belakang item dengan transparansi */
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease; /* Transisi halus */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+}
+
+.content ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Efek hover untuk item */
+    transform: scale(1.05); /* Meningkatkan ukuran item saat hover */
+}
+
+.content ul li a {
+    font-size: 12px; /* Ukuran font yang lebih baik */
+    color: var(--white);
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    text-align: center; /* Menyelaraskan teks di tengah */
+    font-weight: 500; /* Menambahkan bobot font untuk tampilan yang lebih elegan */
+}
+
+ul li.active a {
+    color: var(--white); /* Menggunakan warna emas untuk item aktif */
+    font-weight: bold; /* Menebalkan font untuk item aktif */
+}
+
+ul li.active {
+    border: 1px solid var(--white); /* Menandai item aktif dengan warna emas */
+    background-color: rgba(
+        255,
+        215,
+        0,
+        0.1
+    ); /* Latar belakang item aktif dengan transparansi */
+}
+
+/* Untuk elemen kontak */
+.contact {
+    border-radius: 8px; /* Sudut yang lebih halus untuk kotak */
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.1
+    ); /* Memberikan latar belakang dengan transparansi */
+    padding: 15px; /* Memberikan padding di dalam elemen */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+    transition: background-color 0.3s ease; /* Transisi halus pada latar belakang */
+}
+
+@media screen and (min-width: 320px) {
+    .search-input {
+        margin-left: 10px;
+        width: 80%;
+        padding: 3%;
+        border: none;
+        border-radius: 20px;
+        background-color: var(--slate);
+        color: var(--white);
+    }
+    .left-header > a > img {
+        width: 8rem;
+        margin-top: 0.5rem;
+    }
+}
+@media screen and (min-width: 350px) {
+    .search-input {
+        margin-left: 10px;
+        width: 100%;
+        padding: 3%;
+        border: none;
+        border-radius: 20px;
+        background-color: var(--slate);
+        color: var(--white);
+    }
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+.section {
+    margin-bottom: 40px;
+}
+.section h2 {
+    display: flex;
+    align-items: center;
+}
+.section h2 i {
+    margin-right: 10px;
+}
+.game-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.game-item {
+    background-color: #111828;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 10px);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    display: block;
+}
+.game-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+.game-item p {
+    margin: 10px 0 0;
+    font-size: 14px;
+}
+.show-more {
+    text-align: center;
+    margin-top: 20px;
+}
+.show-more a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+}
+@media (max-width: 768px) {
+    .game-item {
+        width: calc(33.33% - 10px);
+    }
+}
+@media (max-width: 480px) {
+    .game-item {
+        width: calc(31% - 0.95px);
+    }
+}
+.hidden {
+    display: none;
+}
+
+/* CSS untuk animasi */
+.game-item {
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.game-item:active {
+    transform: scale(0.95); /* Menciutkan ukuran saat ditekan */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Menambah bayangan saat ditekan */
+}
+
+/* Efek hover */
+.game-item:hover {
+    background-color: #2a2341; /* Ganti warna sesuai keinginan */
+    border-radius: 5px; /* Menambah sudut melengkung */
+}
